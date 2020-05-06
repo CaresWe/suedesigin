@@ -1,0 +1,46 @@
+.ale {
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  max-width: 750px;
+  bottom: 96%;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  z-index: 999;
+  vertical-align: middle;
+  border-radius: $border-radius;
+  padding: $btn-padding-y $btn-padding-x;
+  font-size: $btn-font-size;
+  .ale-text {
+    margin-left: 2rem;
+  }
+  .ale-btn {
+    float: right;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+  .ale-message {
+    margin-left: 2rem;
+  }
+}
+
+.ale-close {
+  display: none;
+}
+
+.ale-success,
+.no-btn-ale-success {
+  @include alter-style($success, $success, $white);
+}
+
+.ale-info {
+  @include alter-style($info, $info, $white);
+}
+
+.ale-danger {
+  @include alter-style($danger, $danger, $white);
+}
+
+.ale-warning {
+  @include alter-style($warning, $warning, $white);
+}
