@@ -1,9 +1,14 @@
 import React from 'react';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
 import Button, { ButtonType, ButtonSize } from './components/Button'
 import Alert, { AlertType } from './components/Alert';
 import Menu from './components/Menu'
 import MenuItem from './components/Menu/menuItem';
 import SubMenu from './components/Menu/subMenu'
+import Icon from './components/Icon'
+
+library.add(fas)
 
 function App() {
 
@@ -11,6 +16,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Icon icon="coffee" theme="danger" size="10x" />
         <Menu onSelect={(index) => { alert(index) }} mode="vertical" defaultOpenSubMenus={['2']}>
           <MenuItem>link1</MenuItem>
           <MenuItem>link2</MenuItem>
