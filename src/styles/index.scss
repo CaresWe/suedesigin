@@ -4,6 +4,8 @@
 
 @import "mixin";
 
+@import "animation";
+
 // Button component
 @import "../components/Button/style";
 
@@ -14,4 +16,7 @@
 @import "../components/Menu/style";
 
 // Icon component
-@import "../components/Icon/style"
+@import "../components/Icon/style";
+
+// Input component
+@import "../components//Input/style";
