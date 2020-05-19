@@ -1,26 +1,26 @@
-import React, { ReactNode, useState } from 'react'
+import React, { FC, ReactNode, useState } from 'react'
 import classNames from 'classnames'
+import Icon from '../Icon'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+library.add(fas)
 
-export enum AlertType {
-    Success = 'success',
-    Info = 'info',
-    Danger = 'danger',
-    Warning = 'warning'
-}
+
+export type AlertType = 'success' | 'info' | 'danger' | 'warning'
 
 interface BaseAlertProps {
     className?: string;
     type?: AlertType;
-    showClosed?: boolean;
+    closed?: boolean;
     title: ReactNode;
     message?: ReactNode;
 }
 
-const Alert: React.FC<BaseAlertProps> = (props) => {
+const Alert: FC<BaseAlertProps> = (props) => {
     const {
         type,
         className,
-        showClosed,
+        closed,
         title,
         message
     } = props
@@ -30,7 +30,7 @@ const Alert: React.FC<BaseAlertProps> = (props) => {
     // 有按钮时的组件样式
     const classes = classNames('ale', className, {
         [`ale-${type}`]: type,
-        'showClosed': true
+        'closed': true
     })
     // 关闭样式
     const closeClass = classNames('ale-close', className)
@@ -41,7 +41,6 @@ const Alert: React.FC<BaseAlertProps> = (props) => {
     // 组件关闭按钮样式
     const closeBtnClass = classNames('ale-btn', className)
     // 组件内容样式
-    const messageClass = classNames('ale-message', className)
 
 
     // 处理关闭事件
@@ -50,12 +49,12 @@ const Alert: React.FC<BaseAlertProps> = (props) => {
     }
 
     if (!hidden) {
-        if (!showClosed) {
+        if (closed) {
             return (
                 <div className={classes}>
                     <div>
                         <span className={textClass}>{title}</span>
-                        <span className={closeBtnClass} onClick={close}>关闭</span>
+                        <span className={closeBtnClass} onClick={close}><Icon theme="light" icon="closed-captioning"/></span>
                     </div>
                     <span className={textClass}>{message}</span>
                 </div>
@@ -67,9 +66,7 @@ const Alert: React.FC<BaseAlertProps> = (props) => {
                     <div className={titleClass}>
                         <span className={textClass}>{title}</span>
                     </div>
-
                     <span className={textClass}>{message}</span>
-
                 </div>
             )
         }
@@ -82,4 +79,4 @@ const Alert: React.FC<BaseAlertProps> = (props) => {
 
 }
 
-export default Alert
+export default Alert;

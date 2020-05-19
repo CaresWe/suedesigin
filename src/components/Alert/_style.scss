@@ -1,16 +1,13 @@
 .ale {
   width: 100%;
   background: #fff;
-  position: fixed;
+  position: relative;
   max-width: 750px;
-  bottom: 96%;
-  left: 50%;
-  transform: translate(-50%, 100%);
-  z-index: 999;
   vertical-align: middle;
   border-radius: $border-radius;
   padding: $btn-padding-y $btn-padding-x;
   font-size: $btn-font-size;
+  margin-bottom: 1rem;
   .ale-text {
     margin-left: 2rem;
   }
