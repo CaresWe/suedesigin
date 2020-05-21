@@ -29,7 +29,14 @@ storiesOf('按钮组件', module)
     info: {
       text: `
         页面中最常用的的按钮元素，适合于完成特定的交互
-        ### 引用方法
+        组件类型分为
+        - 默认按钮
+        - 链接按钮（Link）
+        - 主按钮（Primary）
+        - 危险按钮（Danger）
+        - 以及两种大小 sm 和 lg
+
+      #### 引用方法
         ~~~js
         import { Button } from 'suedesign'
         ~~~

@@ -1,6 +1,6 @@
 {
   "name": "suedesign",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "private": false,
   "description": "React UI library",
   "author": "CaresWe",
@@ -8,6 +8,7 @@
   "module": "build/index.js",
   "types": "build/index.d.ts",
   "license": "MIT",
+  "homepage": ".",
   "keywords": [
     "React",
     "UI"

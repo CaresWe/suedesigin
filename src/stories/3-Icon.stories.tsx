@@ -6,17 +6,17 @@ import { withInfo } from '@storybook/addon-info'
 
 const IconComponent = () =>
   <>
-    <Icon icon="cloud"theme="danger"/>
-    <Icon icon="cloud"theme="dark"/>
-    <Icon icon="cloud" theme="info"/>
-    <Icon icon="cloud" theme="light"/>
-    <Icon icon="cloud" theme="primary"/>
-    <Icon icon="cloud" theme="warning"/>
-    <Icon icon="cloud" theme="secondary"/>
-    <Icon icon="cloud" theme="success"/>
-    <Icon icon="cloud" theme="success" size="lg"/>
-    <Icon icon="cloud" theme="success" size="sm"/>
-    <Icon icon="cloud" theme="success" size="xs"/>
+    <Icon icon="cloud" theme="danger" />
+    <Icon icon="cloud" theme="dark" />
+    <Icon icon="cloud" theme="info" />
+    <Icon icon="cloud" theme="light" />
+    <Icon icon="cloud" theme="primary" />
+    <Icon icon="cloud" theme="warning" />
+    <Icon icon="cloud" theme="secondary" />
+    <Icon icon="cloud" theme="success" />
+    <Icon icon="cloud" theme="success" size="lg" />
+    <Icon icon="cloud" theme="success" size="sm" />
+    <Icon icon="cloud" theme="success" size="xs" />
   </>
 
 const wrapperStyle: CSSProperties = {
@@ -34,7 +34,10 @@ storiesOf('图标组件', module)
   .addParameters({
     info: {
       text: `
-        页面中最常用的的按钮元素，适合于完成特定的交互
+      语义化的矢量图标
+      [图标库](https://fontawesome.com/icons)
+      + 采取第三方图标库封装（FontAwsome）
+      + 继承该库所有属性，同时可以选择图标类型
         ### 引用方法
         ~~~js
         import { Icon } from 'suedesign'

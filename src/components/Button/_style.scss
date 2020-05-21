@@ -13,6 +13,7 @@
   font-size: $btn-font-size;
   border-radius: $border-radius;
   box-shadow: $btn-box-shadow;
+  margin-left: 10px;
   cursor: pointer;
   transition: $btn-transition;
   &.disabled,

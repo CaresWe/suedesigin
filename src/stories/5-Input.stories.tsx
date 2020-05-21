@@ -33,7 +33,7 @@ storiesOf('输入框组件', module)
     .addParameters({
         info: {
             text: `
-        页面中最常用的的按钮元素，适合于完成特定的交互
+        页面中最常用的的输入元素，通过鼠标或键盘输入内容
         ### 引用方法
         ~~~js
         import { Input } from 'suedesign'
