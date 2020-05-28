@@ -54,7 +54,7 @@ const Alert: FC<BaseAlertProps> = (props) => {
                 <div className={classes}>
                     <div>
                         <span className={textClass}>{title}</span>
-                        <span className={closeBtnClass} onClick={close}><Icon theme="light" icon="closed-captioning"/></span>
+                        <span className={closeBtnClass} onClick={close}><Icon theme="light" icon="times"/></span>
                     </div>
                     <span className={textClass}>{message}</span>
                 </div>
